@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Primeiros Exercícios com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="clickable">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0];
+        console.log(p1.innerText);
+        
+        // Adicionando um evento de clique ao div
+        var div = document.getElementById('clickable');
+        div.addEventListener('click', function() {
+            alert('Div clicado!');
+        });
+    </script>
+    <script src="javascripts.js" async defer></script>
+  </body>
+</html>

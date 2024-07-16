@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Detran</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<h1>Sistema de Multas</h1>
+		<p>
+			Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+			<input type="button" value="Verificar" onclick="calcular()">
+		</p>
+		<div id="res"></div>
+		<script>
+			function calcular() {
+				var txtv = document.querySelector('input#txtvel');
+				var res = document.querySelector('div#res');
+				var vel = Number(txtv.value);
+				res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`;
+				if (vel > 60) {
+					res.innerHTML += `<p>Você está <strong>Multado</strong> por excesso de velocidade.</p>`;
+				}
+				res.innerHTML += `<p>Dirija sempre com o cinto de segurança.</p>`;
+			}
+		</script>
+		<script src="" async defer></script>
+	</body>
+</html>
